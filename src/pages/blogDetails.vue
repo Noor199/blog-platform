@@ -3,8 +3,8 @@
     <div class="card_info">
       <img class="user-image" src="../assets/images/user.png" />
       <div class="user-data">
-        <span> {{ blog.username }}</span>
-        <span> {{ blog.date }}</span>
+        <label> {{ blog.username }}</label>
+        <label> {{ blog.date }}</label>
       </div>
 
       <div class="action-data" v-if="checkIfUserAuth()">
@@ -42,7 +42,7 @@ export default {
     },
     deleteItem() {
       this.blogs.splice(this.$store.state.selectedBlog, 1);
-      this.$store.state.selectedBlog = -1;
+
       this.$router.go(-1);
     },
   },

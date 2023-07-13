@@ -1,8 +1,6 @@
 <template>
-  <div class="blog-flex">
-    <button class="btn-create" v-on:click="$router.push('/blog-action')">
-      Create Blog
-    </button>
+  <div>
+    <headerComponent></headerComponent>
     <div class="cards">
       <div
         class="cards_item"
@@ -13,8 +11,8 @@
           <div class="card_info">
             <img class="user-image" src="../assets/images/user.png" />
             <div class="user-data">
-              <span> {{ card.username }}</span>
-              <span> {{ card.date }}</span>
+              <label> {{ card.username }}</label>
+              <label> {{ card.date }}</label>
             </div>
           </div>
           <div class="card_content">
@@ -30,8 +28,10 @@
 </template>
 
 <script>
+import headerComponent from "@/components/headerComponent";
 export default {
   name: "blogPage",
+  components: { headerComponent },
   mounted() {
     this.$store.state.selectedBlog = -1;
 
@@ -62,22 +62,6 @@ export default {
 </script>
 
 <style scoped>
-.blog-flex {
-  display: flex;
-  flex-direction: column;
-  .btn-create {
-    display: flex;
-    width: -moz-fit-content;
-    width: 100%;
-    justify-content: center;
-    height: 3rem;
-    align-items: center;
-    background: gray;
-    border: 0;
-    color: white;
-  }
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;

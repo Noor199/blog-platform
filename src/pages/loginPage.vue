@@ -51,6 +51,8 @@ export default {
 }
 
 .btn-login {
+  font-weight: bold;
+  text-transform: uppercase;
   display: flex;
   flex: 1;
   width: 100%;

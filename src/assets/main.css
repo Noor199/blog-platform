@@ -1,6 +1,6 @@
 html {
   display: flex;
-  background-color: black;
+  background: linear-gradient(25deg, red, #e7b412, #ffffff, green, #5bccf5);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100%;
   width: 100%;
@@ -22,11 +22,18 @@ body {
 
 .card {
   background: white;
+  cursor: pointer;
   display: flex;
   border-radius: 0.5rem;
   padding: 2rem;
   align-self: center;
   flex-direction: row;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label {
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .card_info {
@@ -45,4 +52,8 @@ body {
     flex-direction: column;
     margin: 0.5rem;
   }
+}
+
+button {
+  cursor: pointer;
 }
