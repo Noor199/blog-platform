@@ -1,13 +1,14 @@
 <template>
-  <div class="login-card">
+  <div class="card">
     <form>
       <img class="logo-image" src="../assets/images/logo.png" />
       <h3>Sign In</h3>
       <div class="form-group">
-        <label>Email address</label>
+        <label>Username</label>
         <input
-          type="email"
+          type="text"
           class="form-control input-text form-control-lg"
+          v-model="username"
           required
         />
       </div>
@@ -16,10 +17,11 @@
         <input
           type="password"
           class="form-control input-text form-control-lg"
+          v-model="password"
           required
         />
       </div>
-      <button type="submit" class="btn-login" v-on:click="doStuff()">
+      <button type="submit" class="btn-login" v-on:click="navigateTo()">
         Sign In
       </button>
     </form>
@@ -29,23 +31,19 @@
 export default {
   name: "loginPage",
   components: [],
+  data() {
+    return { username: "", password: "" };
+  },
   methods: {
-    doStuff() {
+    navigateTo() {
+      localStorage.username = this.username;
+      localStorage.password = this.password;
       this.$router.push("/blog-page");
     },
   },
 };
 </script>
 <style scoped>
-.login-card {
-  background: white;
-  display: flex;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  align-self: center;
-  flex-direction: row;
-}
-
 .logo-image {
   width: 10rem;
   display: flex;

@@ -1,12 +1,6 @@
 html {
   display: flex;
-  background: linear-gradient(
-    30deg,
-    #55a7ce 0%,
-    #172e35 33%,
-    #d21f06 66%,
-    #9dbbb9 100%
-  );
+  background-color: black;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100%;
   width: 100%;
@@ -25,15 +19,11 @@ body {
   justify-content: center;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.card {
+  background: white;
+  display: flex;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  align-self: center;
+  flex-direction: row;
 }
