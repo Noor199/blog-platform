@@ -82,7 +82,9 @@ label,
   flex-direction: column;
   margin: 1rem 0rem;
 }
-
+.input-textarea {
+  resize: none;
+}
 .input-textarea,
 .input-text {
   padding: 0 1rem;
