@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import loginPage from "../pages/loginPage.vue";
 import blogPage from "../pages/blogPage.vue";
 import blogDetails from "../pages/blogDetails.vue";
+import blogAction from "../pages/blogAction.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/blog-details",
     name: "blogDetailsComponent",
     component: blogDetails,
+  },
+  {
+    path: "/blog-action",
+    name: "blogActionComponent",
+    component: blogAction,
   },
 ];
 

@@ -7,7 +7,7 @@
         <input
           type="text"
           class="form-control input-text form-control-lg"
-          v-model="username"
+          v-model="$store.state.authLogin.username"
           required
         />
       </div>
@@ -16,7 +16,7 @@
         <input
           type="password"
           class="form-control input-text form-control-lg"
-          v-model="password"
+          v-model="$store.state.authLogin.password"
           required
         />
       </div>
@@ -29,16 +29,8 @@
 <script>
 export default {
   name: "loginPage",
-  components: [],
-  data() {
-    return { username: "", password: "" };
-  },
   methods: {
     navigateTo() {
-      localStorage.loginData = JSON.stringify({
-        username: this.username,
-        password: this.password,
-      });
       this.$router.push("/blog-page");
     },
   },
@@ -76,5 +68,6 @@ export default {
   height: 2rem;
   border-radius: 1rem;
   width: 20rem;
+  padding: 0 0.4rem;
 }
 </style>

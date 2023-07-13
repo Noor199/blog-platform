@@ -3,19 +3,22 @@
     <div class="card_info">
       <img class="user-image" src="../assets/images/user.png" />
       <div class="user-data">
-        <span> {{ card.user }}</span>
-        <span> {{ card.date }}</span>
+        <span> {{ blog.username }}</span>
+        <span> {{ blog.date }}</span>
       </div>
 
       <div class="action-data" v-if="checkIfUserAuth()">
-        <img src="../assets/images/edit.svg" />
-        <img src="../assets/images/delete.svg" />
+        <img
+          src="../assets/images/edit.svg"
+          @click="$router.push('/blog-action')"
+        />
+        <img src="../assets/images/delete.svg" @click="deleteItem()" />
       </div>
     </div>
     <div class="card_content">
-      <h2 class="blog-title">{{ card.title }}</h2>
+      <h2 class="blog-title">{{ blog.title }}</h2>
       <p class="summary-text">
-        {{ card.description }}
+        {{ blog.description }}
       </p>
     </div>
   </div>
@@ -27,14 +30,20 @@ export default {
   props: [],
   data() {
     return {
-      username: JSON.parse(localStorage.loginData).username,
-      card: JSON.parse(localStorage.cards)[localStorage.selectedCard],
+      blogs: this.$store.state.blogs,
+      blog: this.$store.state.blogs[this.$store.state.selectedBlog],
     };
   },
   methods: {
     checkIfUserAuth() {
-      if (this.card.user === this.username) return true;
+      if (this.blog.username === this.$store.state.authLogin.username)
+        return true;
       return false;
+    },
+    deleteItem() {
+      this.blogs.splice(this.$store.state.selectedBlog, 1);
+      this.$store.state.selectedBlog = -1;
+      this.$router.go(-1);
     },
   },
 };
