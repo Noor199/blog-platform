@@ -1,8 +1,7 @@
 <template>
   <div class="card">
     <form>
-      <img class="logo-image" src="../assets/images/logo.png" />
-      <h3>Sign In</h3>
+      <img class="logo-image" src="../assets/images/logo.jpeg" />
       <div class="form-group">
         <label>Username</label>
         <input
@@ -36,8 +35,10 @@ export default {
   },
   methods: {
     navigateTo() {
-      localStorage.username = this.username;
-      localStorage.password = this.password;
+      localStorage.loginData = JSON.stringify({
+        username: this.username,
+        password: this.password,
+      });
       this.$router.push("/blog-page");
     },
   },

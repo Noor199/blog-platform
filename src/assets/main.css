@@ -8,6 +8,7 @@ html {
 
 body {
   flex: 1;
+  margin: 0;
   flex-direction: row;
 }
 
@@ -26,4 +27,22 @@ body {
   padding: 2rem;
   align-self: center;
   flex-direction: row;
+}
+
+.card_info {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+
+  .user-image {
+    width: 3.5rem;
+  }
+
+  .user-data {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
 }

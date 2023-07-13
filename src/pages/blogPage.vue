@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <div class="cards_item" v-for="(card, index) in cards" v-bind:key="index">
-      <div class="card">
+      <div class="card" @click="navigateToDetails(index)">
         <div class="card_info">
           <img class="user-image" src="../assets/images/user.png" />
           <div class="user-data">
@@ -23,6 +23,7 @@
 <script>
 export default {
   name: "blogPage",
+
   mounted() {
     if (!localStorage.cards) {
       this.generateMockData();
@@ -51,27 +52,15 @@ export default {
       }
       localStorage.cards = JSON.stringify(cardList);
     },
+    navigateToDetails(index) {
+      localStorage.selectedCard = index;
+      this.$router.push("/blog-details");
+    },
   },
 };
 </script>
 
 <style scoped>
-.card_info {
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-
-  .user-image {
-    width: 3.5rem;
-  }
-  .user-data {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
-  }
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
