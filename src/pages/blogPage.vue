@@ -72,6 +72,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  width: 100%;
 }
 
 .cards_item {
@@ -81,7 +82,7 @@ export default {
 
 @media (min-width: 40rem) {
   .cards_item {
-    width: fit-content;
+    width: -webkit-fill-available;
     margin: auto;
   }
 }
