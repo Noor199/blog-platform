@@ -5,9 +5,9 @@
       src="../assets/images/logo.jpeg"
       v-on:click="$router.push('/')"
     />
-    <div class="btn-create" v-on:click="$router.push('/blog-action')">
+    <h3 class="btn-create" v-on:click="$router.push('/blog-action')">
       Create Blog
-    </div>
+    </h3>
   </div>
 </template>
 
