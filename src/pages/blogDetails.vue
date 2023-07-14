@@ -52,6 +52,6 @@ export default {
 <style scoped>
 .action-data {
   display: flex;
-  height: 2.5rem;
+  height: 2rem;
 }
 </style>
