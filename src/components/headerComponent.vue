@@ -27,18 +27,22 @@ export default {
   margin-bottom: 2rem;
   justify-content: space-between;
   padding: 0 1.5rem;
-  .header-logo-image {
-    cursor: pointer;
-  }
-  .btn-create {
-    cursor: pointer;
-    display: flex;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: fit-content;
-    align-items: center;
-    color: black;
-  }
+}
+
+.header-logo-image {
+  cursor: pointer;
+  width: 10rem;
+  display: flex;
+}
+
+.btn-create {
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+  align-items: center;
+  color: black;
 }
 .btn-create:hover {
   opacity: 0.3;

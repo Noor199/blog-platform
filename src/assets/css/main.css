@@ -36,22 +36,23 @@ label {
   cursor: pointer;
 }
 
+.user-image {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
 .card_info {
   height: fit-content;
   display: flex;
   flex-direction: row;
   flex: 1;
+}
 
-  .user-image {
-    width: 3.5rem;
-  }
-
-  .user-data {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: 0.5rem;
-  }
+.user-data {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 0.5rem;
 }
 
 .big-card {
