@@ -67,7 +67,25 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: 4s;
   width: 100%;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.25;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .cards_item {
