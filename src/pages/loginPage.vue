@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <form @submit="navigateTo()" id="blog-login">
+    <form @submit="navigateTo()" action="/blog-page" id="blog-login">
       <img class="logo-image" src="../assets/images/logo.jpeg" />
       <div class="form-group">
         <label>Username</label>
@@ -34,7 +34,6 @@ export default {
   name: "loginPage",
   methods: {
     navigateTo() {
-      this.$router.push("/blog-page");
       sessionStorage.setItem("store", JSON.stringify(this.$store.state));
     },
   },
