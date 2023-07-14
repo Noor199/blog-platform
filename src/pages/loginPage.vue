@@ -35,6 +35,7 @@ export default {
   methods: {
     navigateTo() {
       this.$router.push("/blog-page");
+      sessionStorage.setItem("store", JSON.stringify(this.$store.state));
     },
   },
 };

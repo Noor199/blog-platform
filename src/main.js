@@ -7,9 +7,13 @@ import App from "./App.vue";
 const store = createStore({
   state() {
     return {
-      blogs: [],
-      selectedBlog: -1,
-      authLogin: { username: "", password: "" },
+      blogs: JSON.parse(sessionStorage.getItem("store"))?.blogs ?? [],
+      selectedBlog:
+        JSON.parse(sessionStorage.getItem("store"))?.selectedBlog ?? -1,
+      authLogin: JSON.parse(sessionStorage.getItem("store"))?.authLogin ?? {
+        username: "",
+        password: "",
+      },
     };
   },
 });

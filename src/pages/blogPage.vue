@@ -45,6 +45,7 @@ export default {
       for (let i = 0; i < 6; i++) {
         this.$store.state.blogs.push(blogItem);
       }
+      sessionStorage.setItem("store", JSON.stringify(this.$store.state));
     },
     navigateToDetails(index) {
       this.$store.state.selectedBlog = index;

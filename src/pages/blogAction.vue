@@ -68,6 +68,7 @@ export default {
         : this.blogs.unshift(this.blog);
 
       this.$router.go(-1);
+      sessionStorage.setItem("store", JSON.stringify(this.$store.state));
     },
   },
 };

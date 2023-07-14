@@ -42,8 +42,8 @@ export default {
     },
     deleteItem() {
       this.blogs.splice(this.$store.state.selectedBlog, 1);
-
       this.$router.go(-1);
+      sessionStorage.setItem("store", JSON.stringify(this.$store.state));
     },
   },
 };
