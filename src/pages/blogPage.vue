@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="blog-list">
     <headerComponent></headerComponent>
     <div class="cards">
       <div
@@ -36,12 +36,13 @@ export default {
   mounted() {
     this.$store.state.selectedBlog = -1;
 
-    if (this.$store.state.blogs.length === 0) {
+    if (!this.$store.state.blogs) {
       this.generateMockData();
     }
   },
   methods: {
     generateMockData() {
+      this.$store.state.blogs = [];
       for (let i = 0; i < 6; i++) {
         this.$store.state.blogs.push(blogItem);
       }
@@ -98,5 +99,10 @@ export default {
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0;
+}
+.blog-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 </style>

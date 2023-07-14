@@ -7,7 +7,7 @@ import App from "./App.vue";
 const store = createStore({
   state() {
     return {
-      blogs: JSON.parse(sessionStorage.getItem("store"))?.blogs ?? [],
+      blogs: JSON.parse(sessionStorage.getItem("store"))?.blogs ?? undefined,
       selectedBlog:
         JSON.parse(sessionStorage.getItem("store"))?.selectedBlog ?? -1,
       authLogin: JSON.parse(sessionStorage.getItem("store"))?.authLogin ?? {

@@ -11,12 +11,17 @@
     <div class="card_content">
       <div class="form-group">
         <label>Title</label>
-        <input type="text" class="input-text" v-model="blog.title" required />
+        <input
+          type="text"
+          class="input-text text-input-style"
+          v-model="blog.title"
+          required
+        />
       </div>
       <div class="form-group">
         <label>Description</label>
         <textarea
-          class="input-textarea"
+          class="input-textarea text-input-style"
           rows="10"
           v-model="blog.description"
           required
@@ -90,13 +95,9 @@ label,
   resize: none;
 }
 
-.input-textarea,
-.input-text {
-  padding: 0 1rem;
-}
-
 .input-text {
   height: 2.5rem;
+  padding: 0 1rem;
 }
 
 .btn-action {

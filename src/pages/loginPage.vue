@@ -6,7 +6,7 @@
         <label>Username</label>
         <input
           type="text"
-          class="form-control input-text form-control-lg"
+          class="form-control text-input-style input-text form-control-lg"
           v-model="$store.state.authLogin.username"
           minlength="5"
           maxlength="30"
@@ -18,7 +18,7 @@
         <label>Password</label>
         <input
           type="password"
-          class="form-control input-text form-control-lg"
+          class="form-control text-input-style input-text form-control-lg"
           v-model="$store.state.authLogin.password"
           minlength="8"
           maxlength="30"
@@ -61,7 +61,6 @@ export default {
 
 .input-text {
   height: 2rem;
-  border-radius: 1rem;
   width: 20rem;
   padding: 0 0.4rem;
 }
