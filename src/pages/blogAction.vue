@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card big-card">
     <div class="card_info">
       <img class="user-image" src="../assets/images/user.png" />
       <div class="user-data">
@@ -22,7 +22,11 @@
           required
         ></textarea>
       </div>
-      <button type="submit" class="btn-action" @click="blogAction()">
+      <button
+        type="submit"
+        class="button-main-style btn-action"
+        @click="blogAction()"
+      >
         {{ selectedBlog != -1 ? "save" : "create" }}
       </button>
     </div>
@@ -74,39 +78,31 @@ label,
 .card {
   cursor: default;
 }
-.card {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-}
 
 .form-group {
   display: flex;
   flex-direction: column;
   margin: 1rem 0rem;
 }
+
 .input-textarea {
   resize: none;
 }
+
 .input-textarea,
 .input-text {
   padding: 0 1rem;
 }
+
 .input-text {
   height: 2.5rem;
 }
+
 .btn-action {
-  font-weight: bold;
-  text-transform: uppercase;
   float: right;
   width: fit-content;
   padding: 0 2rem;
-  height: 3rem;
   background: green;
   border: 0;
-  border-radius: 2rem;
-  font-weight: bold;
-  color: white;
 }
 </style>

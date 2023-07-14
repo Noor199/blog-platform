@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card big-card">
     <div class="card_info">
       <img class="user-image" src="../assets/images/user.png" />
       <div class="user-data">
@@ -50,12 +50,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-}
 .action-data {
   display: flex;
   height: 2.5rem;

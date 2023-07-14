@@ -20,7 +20,11 @@
           required
         />
       </div>
-      <button type="submit" class="btn-login" v-on:click="navigateTo()">
+      <button
+        type="submit"
+        class="button-main-style btn-login"
+        v-on:click="navigateTo()"
+      >
         Sign In
       </button>
     </form>
@@ -51,19 +55,8 @@ export default {
 }
 
 .btn-login {
-  font-weight: bold;
-  text-transform: uppercase;
-  display: flex;
-  flex: 1;
-  width: 100%;
-  justify-content: center;
-  height: 3rem;
-  align-items: center;
   background: #d31c06;
-  border: 0;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  color: white;
+  width: 100%;
 }
 
 .input-text {
