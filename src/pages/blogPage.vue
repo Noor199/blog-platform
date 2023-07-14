@@ -29,6 +29,7 @@
 
 <script>
 import headerComponent from "@/components/headerComponent";
+import * as blogItem from "@/assets/mockData/blogs.json";
 export default {
   name: "blogPage",
   components: { headerComponent },
@@ -41,16 +42,8 @@ export default {
   },
   methods: {
     generateMockData() {
-      let item = {
-        title: "Lorem Ipsum",
-        username: "user1",
-        date: "July 13, 2023",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      };
-
       for (let i = 0; i < 6; i++) {
-        this.$store.state.blogs.push(item);
+        this.$store.state.blogs.push(blogItem);
       }
     },
     navigateToDetails(index) {
