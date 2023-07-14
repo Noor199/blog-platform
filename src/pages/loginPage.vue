@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <form>
+    <form @submit="navigateTo()" id="blog-login">
       <img class="logo-image" src="../assets/images/logo.jpeg" />
       <div class="form-group">
         <label>Username</label>
@@ -8,7 +8,10 @@
           type="text"
           class="form-control input-text form-control-lg"
           v-model="$store.state.authLogin.username"
+          minlength="5"
+          maxlength="30"
           required
+          @input="$store.state.authLogin.password = ''"
         />
       </div>
       <div class="form-group">
@@ -17,16 +20,12 @@
           type="password"
           class="form-control input-text form-control-lg"
           v-model="$store.state.authLogin.password"
+          minlength="8"
+          maxlength="30"
           required
         />
       </div>
-      <button
-        type="submit"
-        class="button-main-style btn-login"
-        v-on:click="navigateTo()"
-      >
-        Sign In
-      </button>
+      <button type="submit" class="button-main-style btn-login">Sign In</button>
     </form>
   </div>
 </template>
